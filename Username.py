@@ -124,7 +124,7 @@ def ScrapTweets(user):
     the_client = uReq(link)
     page_html = the_client.read()
     the_client.close()
-    
+
     soup = BeautifulSoup(page_html, 'html.parser')
 
     try:
