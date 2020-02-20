@@ -10,12 +10,11 @@ def main():
     while True:
         ch='y'
         title()
-        user=input(C+"root@social_scraper:"+W+"~/Username# Enter the Username:")
         print(C+"1."+W+"Check in Social Media")
         print(C+"2."+W+"Platforms and Website")
-        ch=input(C+"Enter the choice:"+W)
+        ch=input(C+"root@social_scraper:~/Username#"+C+"Enter the choice:"+W)
         if ch=='1':
-            username(user)
+            username()
         elif ch=='2':
             #checkuser(user)
             return
