@@ -19,10 +19,11 @@ def Instagram(user):
     except:
         pass
     f1=open("./{0}/{1}.txt".format(user,user),"w+")
+
     r = requests.get("https://www.instagram.com/"+ user +"/?__a=1")
     if r.status_code == 200:
         res = r.json()['graphql']['user']
-        f1.write("Username: "+res['username'])
+        f1.write("\n\nUsername: "+res['username'])
         f1.write("\nFull Name: "+res['full_name'])
         try:
             f1.write("\nBusiness Category: "+res['edge_follow']['business_category_name'])
@@ -92,6 +93,9 @@ def Instagram(user):
                             imageai("./{}".format(str(i))+"/"+j)
             else:
                 return
+            print("Fetched Details are Solved at"+"./{0}/{1}.txt".format(username1,username1))
+            if input("Do you want to open it (Y/N):") in ("Y",'y'):
+                os.system("cat "+"./{0}/{1}.txt".format(username1,username1))
             f1.close()
 
     elif r.status_code == 404:

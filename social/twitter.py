@@ -1,8 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
+from urllib.request import urlopen as uReq
+import os
+import json
+
+R = '\033[31m' # red
+G = '\033[32m' # green
+C = '\033[36m' # cyan
+W = '\033[0m'  # white
 
 def ScrapTweets(user):
-    print (W + '[+]' + G + ' Fetching Data From Twitter...' + '\n')
+    print ('[+]' + G + ' Fetching Data From Twitter...' + '\n')
     link = "https://twitter.com/" + user
     the_client = uReq(link)
     page_html = the_client.read()
@@ -11,94 +19,90 @@ def ScrapTweets(user):
     soup = BeautifulSoup(page_html, 'html.parser')
 
     try:
-        full_name = soup.find('a', attrs={"class": "ProfileHeaderCard-nameLink u-textInheritColor js-nav"})
-        print("User Name --> " + W + str(full_name.text))
+        os.mkdir(user)
     except:
-        print("User Name -->"+ R +" Not Found")
-    print()
+        pass
+    f1=open("./{0}/{1}.txt".format(user,user),"w+")
+
+    try:
+        full_name = soup.find('a', attrs={"class": "ProfileHeaderCard-nameLink u-textInheritColor js-nav"})
+        f1.write("\nUser Name --> " + str(full_name.text))
+    except:
+        f1.write("\nUser Name -->"+ R +" Not Found")
 
     try:
         user_id = soup.find('b', attrs={"class": "u-linkComplex-target"})
-        print("User Id --> "+W + str(user_id.text))
+        f1.write("\nUser Id --> "+str(user_id.text))
     except:
-        print("User Id --> "+R+"Not Found")
-    print()
+        f1.write("\nUser Id --> "+"Not Found")
 
     try:
         decription = soup.find('p', attrs={"class": "ProfileHeaderCard-bio u-dir"})
-        print("Description --> "+W + str(decription.text))
+        f1.write("\nDescription --> "+str(decription.text))
     except:
-        print(R+"Decription not provided by the user")
-    print()
+        f1.write("\nDecription not provided by the user")
 
     try:
         user_location = soup.find('span', attrs={"class": "ProfileHeaderCard-locationText u-dir"})
-        print("Location -->  " +  str(user_location.text.strip()))
+        f1.write("\nLocation -->  " +  str(user_location.text.strip()))
     except:
-        print(R+"Location not provided by the user")
-    print()
+        f1.write("\nLocation not provided by the user")
 
     try:
         connectivity = soup.find('span', attrs={"class": "ProfileHeaderCard-urlText u-dir"})
         title = connectivity.a["title"]
-        print("Link provided by the user --> " + str(title))
+        f1.write("\nLink provided by the user --> " + str(title))
     except:
-        print(R+"No contact link is provided by the user")
-    print()
+        f1.write("\nNo contact link is provided by the user")
 
     try:
         join_date = soup.find('span', attrs={"class": "ProfileHeaderCard-joinDateText js-tooltip u-dir"})
-        print("The user joined twitter on --> " + str(join_date.text))
+        f1.write("\nThe user joined twitter on --> " + str(join_date.text))
     except:
-        print(R+"The joined date is not provided by the user")
-    print()
+        f1.write("\nThe joined date is not provided by the user")
 
     try:
         birth = soup.find('span', attrs={"class": "ProfileHeaderCard-birthdateText u-dir"})
         birth_date = birth.span.text
-        print("Date of Birth:"+str(birth_date.strip()))
+        f1.write("\nDate of Birth:"+str(birth_date.strip()))
     except:
-        print(R+"Birth Date not provided by the user")
-    print()
+        f1.write("\nBirth Date not provided by the user")
 
     try:
         span_box = soup.findAll('span', attrs={"class": "ProfileNav-value"})
-        print("Total tweets --> " + span_box[0].text)
+        f1.write("\nTotal tweets --> " + span_box[0].text)
     except:
-        print(R+"Total Tweets --> Zero")
-    print()
+        f1.write("\nTotal Tweets --> Zero")
 
     try:
-        print("Following --> " +span_box[1].text)
+        f1.write("\nFollowing --> " +span_box[1].text)
     except:
-        print(R+"Following --> Zero")
-    print()
+        f1.write("\nFollowing --> Zero")
 
     try:
-        print("Followers --> " + span_box[2].text)
+        f1.write("\nFollowers --> " + span_box[2].text)
     except:
-        print(R+"Followers --> Zero")
-    print()
+        f1.write("\nFollowers --> Zero")
 
     try:
-        print("Likes send by him --> " + span_box[3].text)
+        f1.write("\nLikes send by him --> " + span_box[3].text)
     except:
-        print(R"Likes send by him --> Zero")
-    print()
+        f1.write("\nLikes send by him --> Zero")
 
     try:
         if span_box[4].text != "More ":
-            print("No. of parties he is Subscribed to --> " + span_box[4].text)
+            f1.write("\nNo. of parties he is Subscribed to --> " + span_box[4].text)
         else:
-            print("No. of parties he is Subscribed to --> Zero")
+            f1.write("\nNo. of parties he is Subscribed to --> Zero")
     except:
-        print("No. of parties he is Subscribed to --> Zero")
-    print(W)
+        f1.write("\nNo. of parties he is Subscribed to --> Zero")
+    f1.write(W)
 
     spana = soup.findAll('span', attrs={"class": "ProfileNav-value"})
 
-    print("Tweets by "+ str(username) + " are --> ")
-    # TweetTextSize TweetTextSize--normal js-tweet-text tweet-text
+    f1.write("\nTweets by "+ str(user) + " are --> ")
+
     for tweets in soup.findAll('p', attrs={"class": "TweetTextSize TweetTextSize--normal js-tweet-text tweet-text"}):
-        print(tweets.text)
-        print()
+        f1.write(tweets.text)
+        f1.write("\n")
+    f1.close()

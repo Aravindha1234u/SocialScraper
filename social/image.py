@@ -26,3 +26,4 @@ def imageai(url):
                 print(G+str(j)+" : "+str(float(i[j])*100)+"%")
             else:
                 print(W+str(j)+" : "+str(i[j]))
+        print()

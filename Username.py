@@ -28,6 +28,6 @@ def username():
             for i in user:
                 Instagram(i)
             return()
-        ch=input(C+"Do you want to Continue again:"+W)
+        ch=input(C+"\n\nDo you want to Continue again:"+W)
     f.close()
     exit()
