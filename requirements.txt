@@ -2,3 +2,4 @@ requests
 bs4
 igql
 jsonlib
+urllib3
