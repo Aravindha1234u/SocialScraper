@@ -93,8 +93,8 @@ def Instagram(user):
                             imageai("./{}".format(str(i))+"/"+j)
             else:
                 return
-            print("Fetched Details are Solved at"+"./{0}/{1}.txt".format(username1,username1))
-            if input("Do you want to open it (Y/N):") in ("Y",'y'):
+            print("Fetched Details are Solved at "+"./{0}/{1}.txt".format(username1,username1))
+            if input("Do you want to open it (Y/N):") in ("Y","y"):
                 os.system("cat "+"./{0}/{1}.txt".format(username1,username1))
             f1.close()
 
