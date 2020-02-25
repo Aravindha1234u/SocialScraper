@@ -39,7 +39,10 @@ def imageai(url):
         auth=(key, secret),
         files={'image': open(url, 'rb')})
     data=r.json()
-    #exit()
+    '''
+    data={'result':{'tags':[{'confidence' : '70.77', 'tag' : {'en': 'bikini'}},{'confidence' : '7.08091878890991','tag' : {'en': 'summer'}}]}}
+    '''
+    print()
     for i in data['result']['tags']:
         for j in i.keys():
             if str(j)=="confidence" and float(i[j]) > 75:
@@ -50,6 +53,5 @@ def imageai(url):
             elif str(j)=="confidence" and float(i[j]) > 35:
                 print(G+str(j)+" : "+str(float(i[j]))+"%")
             else:
-                print(W+str(j)+" : "+str(i[j]))
-        print()
-#imageai("/root/Downloads/SocialScraper/image.jpeg")
+                if str(type(i[j])) == "<class 'dict'>":
+                    print(W+str(j)+" : "+str(i[j]['en']))
