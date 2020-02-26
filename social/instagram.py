@@ -5,6 +5,8 @@ import ast
 import os
 from social.image import *
 import re
+from machine import *
+
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -68,9 +70,6 @@ def Instagram(user):
                         j1 = ast.literal_eval(str(comments_batch['node']))
                         f1.write("\nOwner:"+j1['owner']['username'])
                         f1.write("\nText:"+j1['text'])
-                        if j1['text'] in wordlist:
-                            print(R+"{} May be a Predator".format(j1['owner']['username'])+W)
-                            predator.append(j1['owner']['username'])
                     f1.write("\nTimestamp:"+ str(i['node']["taken_at_timestamp"]))
                     f1.write("\nDimensions:"+str(i['node']["dimensions"]['height'])+" X "+str(i['node']["dimensions"]['width']))
                     f1.write("\nURL:"+str(i['node']["display_url"]))
@@ -81,7 +80,11 @@ def Instagram(user):
                     f1.write("accessibility_caption:"+str(i['node']["accessibility_caption"]))
                     if str(i['node']["accessibility_caption"]) in wordlist:
                         f1.write(R+"Image may Contain Insecure Content")
-
+            p=machine(username1)
+            if p==True:
+                predator.append(j1['owner']['username'])
+            else:
+                pass
             print(R+"\nPredator Identity Details:\n")
             print(W)
             if len(predator)>0:

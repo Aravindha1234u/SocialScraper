@@ -4,3 +4,6 @@ def api_key():
     return "acc_7a12e1ad1c7a241"
 def api_secret():
     return '848fffd1730d47352bbdfd8c52b4aae6'
+
+if __name__ == '__main__':
+    pass

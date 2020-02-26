@@ -1,5 +1,5 @@
 import requests
-from api import api_key,api_secret
+from .api import *
 
 R = '\033[31m' # red
 G = '\033[32m' # green
