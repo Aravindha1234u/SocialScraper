@@ -70,6 +70,9 @@ def Instagram(user):
                         j1 = ast.literal_eval(str(comments_batch['node']))
                         f1.write("\nOwner:"+j1['owner']['username'])
                         f1.write("\nText:"+j1['text'])
+                        if j1['text'] in wordlist:
+                            predator.append(j1['owner']['username'])
+                            print(R+"{} May be a Predator".format(j1['owner']['username'])+W)
                     f1.write("\nTimestamp:"+ str(i['node']["taken_at_timestamp"]))
                     f1.write("\nDimensions:"+str(i['node']["dimensions"]['height'])+" X "+str(i['node']["dimensions"]['width']))
                     f1.write("\nURL:"+str(i['node']["display_url"]))
@@ -80,11 +83,11 @@ def Instagram(user):
                     f1.write("accessibility_caption:"+str(i['node']["accessibility_caption"]))
                     if str(i['node']["accessibility_caption"]) in wordlist:
                         f1.write(R+"Image may Contain Insecure Content")
-            p=machine(username1)
+            '''p=machine(username1)
             if p==True:
                 predator.append(j1['owner']['username'])
             else:
-                pass
+                pass'''
             print(R+"\nPredator Identity Details:\n")
             print(W)
             if len(predator)>0:
@@ -93,7 +96,8 @@ def Instagram(user):
                     arr=os.listdir("./{}".format(str(i)))
                     for j in arr:
                         if re.match(r".+\.jpg",j):
-                            imageai("./{}".format(str(i))+"/"+j)
+                            if imageai("./{}".format(str(i))+"/"+j) == True:
+                                print(R+"{} Is a Predator".format(str(i))+W)
             else:
                 return
             print("Fetched Details are Solved at "+"./{0}/{1}.txt".format(username1,username1))

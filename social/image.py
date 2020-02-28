@@ -1,5 +1,8 @@
 import requests
-from .api import *
+try:
+    from api import *
+except:
+    from .api import *
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -13,22 +16,27 @@ def nsfw(url):
         files={
             'image': open(url, 'rb'),
         },
-        headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
+        headers={'api-key': '5512e9f0-52d4-4996-95f2-110c331773d7'}
     )
     data=r.json()
-
+    confidence=[]
     for i in data['output']['detections']:
         for j in i.keys():
             if str(j)=="confidence" and float(i[j])*100 > 75:
                 print(R+str(j)+" : "+str(float(i[j])*100)+"%")
-                nsfw(url)
+                confidence.append(float(i[j])*100)
             elif str(j)=="confidence" and float(i[j])*100 > 50:
                 print(C+str(j)+" : "+str(float(i[j])*100)+"%")
+                confidence.append(float(i[j])*100)
             elif str(j)=="confidence" and float(i[j])*100 > 35:
                 print(G+str(j)+" : "+str(float(i[j])*100)+"%")
+                confidence.append(float(i[j])*100)
             else:
                 print(W+str(j)+" : "+str(i[j]))
-        print()
+    print()
+    for i in confidence:
+        if i>=90:
+            return True
 def imageai(url):
     #imagga api
     key = api_key()
@@ -42,8 +50,15 @@ def imageai(url):
     '''
     data={'result':{'tags':[{'confidence' : '70.77', 'tag' : {'en': 'bikini'}},{'confidence' : '7.08091878890991','tag' : {'en': 'summer'}}]}}
     '''
+    f=open('wordlist.txt','r')
+    wordlist=[]
+    for i in f:
+        for j in i.split():
+            wordlist.append(j)
+    f.close()
+    tags=[]
     print()
-    for i in data['result']['tags']:
+    for i in data['result']['tags'][:5]:
         for j in i.keys():
             if str(j)=="confidence" and float(i[j]) > 75:
                 print(R+str(j)+" : "+str(float(i[j]))+"%")
@@ -55,3 +70,19 @@ def imageai(url):
             else:
                 if str(type(i[j])) == "<class 'dict'>":
                     print(W+str(j)+" : "+str(i[j]['en']))
+            if str(j)!="confidence":
+                tags.append(str(i[j]['en']))
+    print()
+    for i in tags:
+        for j in wordlist:
+            if i==j:
+                n=1
+                break
+    if n==1:
+        print("Checking for NSFW")
+        print()
+        if nsfw(url):
+            print("Resolving....")
+            return True
+    else:
+        return False
