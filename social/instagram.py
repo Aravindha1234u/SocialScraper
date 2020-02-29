@@ -102,7 +102,7 @@ def Instagram(user):
                 return
             print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
             for i in predator:
-                print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(i,i))
+                print("./{0}/{1}.txt".format(i,i))
                 f=open("./{0}/{1}.txt".format(i,i),'r')
                 message=f.read()
                 f.close()
