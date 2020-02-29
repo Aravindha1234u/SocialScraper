@@ -6,5 +6,6 @@ def api_secret():
     return '848fffd1730d47352bbdfd8c52b4aae6'
 def deepai():
     return '5512e9f0-52d4-4996-95f2-110c331773d7'
+
 if __name__ == '__main__':
     pass
