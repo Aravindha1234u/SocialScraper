@@ -6,7 +6,7 @@ import os
 from social.image import *
 import re
 from machine import *
-
+from social.mail import *
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -100,9 +100,16 @@ def Instagram(user):
                                 print(R+"{} Is a Predator".format(str(i))+W)
             else:
                 return
-            print("Fetched Details are Solved at "+"./{0}/{1}.txt".format(username1,username1))
-            if input("Do you want to open it (Y/N):") in ("Y","y"):
-                os.system("cat "+"./{0}/{1}.txt".format(username1,username1))
+            print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
+            for i in predator:
+                print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(i,i))
+                f=open("./{0}/{1}.txt".format(i,i),'r')
+                message=f.read()
+                f.close()
+
+                #AutoMail Generated
+                mail(message)
+
             f1.close()
 
     elif r.status_code == 404:

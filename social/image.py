@@ -11,6 +11,7 @@ W = '\033[0m'  # white
 
 def nsfw(url):
     #deepai api
+    '''
     r = requests.post(
         "https://api.deepai.org/api/nsfw-detector",
         files={
@@ -19,6 +20,8 @@ def nsfw(url):
         headers={'api-key': '5512e9f0-52d4-4996-95f2-110c331773d7'}
     )
     data=r.json()
+    '''
+    data={'result':{'tags':[{'confidence' : '70.77', 'tag' : {'en': 'bikini'}},{'confidence' : '7.08091878890991','tag' : {'en': 'summer'}}]}}
     confidence=[]
     for i in data['output']['detections']:
         for j in i.keys():
@@ -41,7 +44,7 @@ def imageai(url):
     #imagga api
     key = api_key()
     secret = api_secret()
-
+    '''
     r = requests.post(
         'https://api.imagga.com/v2/tags',
         auth=(key, secret),
@@ -49,7 +52,6 @@ def imageai(url):
     data=r.json()
     '''
     data={'result':{'tags':[{'confidence' : '70.77', 'tag' : {'en': 'bikini'}},{'confidence' : '7.08091878890991','tag' : {'en': 'summer'}}]}}
-    '''
     f=open('wordlist.txt','r')
     wordlist=[]
     for i in f:
