@@ -23,6 +23,7 @@ def search():
             f1.write("\n")
             res = r.json()
             print("\n")
+            print(res)
             print(C+"Found Account At \n")
             for i in res['items']:
                 if i["displayLink"] not in acc:
