@@ -3,10 +3,7 @@
 Social Scraper is a python tool meant for Detection of Child Predators/Cyber Harassers on Social Media
 
 ```
-Tool intends to identify the cyber predators/child harassers on social media with a
-malevolent intent. The posts, comments and followers on the social media are subjected to analysis using
-Artificial Intelligence, Machine Learning with IGPL and NSFW(Not Safe For Work) to categorise the
-offensive contents.
+Tool intends to identify the cyber predators/child harassers on social media with a malevolent intent. The posts, comments and followers on the social media are subjected to analysis using Artificial Intelligence, Machine Learning with IGPL and NSFW(Not Safe For Work) to categorise the offensive contents.
 ```
 
 **Creators:**
