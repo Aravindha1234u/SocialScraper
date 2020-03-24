@@ -10,6 +10,7 @@ Artificial Intelligence, Machine Learning with IGPL and NSFW(Not Safe For Work) 
 offensive contents.
 
 ***
+
 ### Prerequisites
 1.Python 3.X with pip3 Installed  
 
