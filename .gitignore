@@ -5,4 +5,3 @@ social/credentials.json
 __pycache__/**
 social/__pycache__/**
 icon.png
-.gitignore
