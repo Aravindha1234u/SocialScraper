@@ -11,16 +11,15 @@ offensive contents.
 
 ***
 ### Prerequisites
-1.Python 3.x
-...1. Pip3 installed  
-  if not then, pip3 installation  
+1.Python 3.x  
+... 1. Pip3 installed  
+      if not then, pip3 installation  
     ```
-    apt install python3-pip
+      apt install python3-pip
     ```
-
-  To check version of pip  
+      To check version of pip
     ```
-    pip3 --version
+      pip3 --version
     ```
 
 ### User List Creation
