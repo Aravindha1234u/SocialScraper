@@ -1,4 +1,4 @@
-# SocialScraper ![logo](https://cdn3.iconfinder.com/data/icons/web-hosting-2-1/128/95-512.png =250x250)
+# SocialScraper ![logo](https://cdn3.iconfinder.com/data/icons/web-hosting-2-1/128/95-512.png | width=100)
 
 Social Scraper is a python tool meant for Detection of Child Predators/Cyber Harassers on Social Media
 
