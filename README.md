@@ -11,8 +11,8 @@ offensive contents.
 
 ***
 ### Prerequisites
-1.Python 3.X
-...1.pip3 Installed
+1.Python 3.X  
+1.pip3 Installed
 If not then,pip3 installation  
 ```
 apt install python3-pip
