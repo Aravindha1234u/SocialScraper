@@ -11,11 +11,10 @@ offensive contents.
 
 ***
 **Creators:**
-
-    [Aravindha Hariharan M](https://github.com/Aravindha1234u)
-    [Kabilan S](https://github.com/kabilan1290)
-    [Gowtham G](https://github.com/Gowtham-18)
-    [Giridhara Prasath G](https://github.com/giridhar30)
+> [Aravindha Hariharan M](https://github.com/Aravindha1234u)
+> [Kabilan S](https://github.com/kabilan1290)
+> [Gowtham G](https://github.com/Gowtham-18)
+> [Giridhara Prasath G](https://github.com/giridhar30)
 
 
 
