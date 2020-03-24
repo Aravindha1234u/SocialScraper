@@ -1,6 +1,7 @@
 from Username import *
 from title import *
 from search import search
+from reverseimagesearch import reverseimagesearch
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -17,8 +18,13 @@ def main():
         if ch=='1':
             username()
         elif ch=='2':
-            search()
-            return
+            print(C+"1."+W+"Keyword Search")
+            print(C+"2."+W+"Image Search")
+            ch1=input(C+"root@social_scraper:~/Username/search#"+C+"Enter the choice:"+W)
+            if ch1==1:
+                search()
+            else:
+                reverseimagesearch()
         else:
             print("Invalid Choice")
 
@@ -27,7 +33,7 @@ def main():
             continue
         else:
             print("\nThank You")
-            break
+            return
 
 if __name__ == '__main__':
     main()
