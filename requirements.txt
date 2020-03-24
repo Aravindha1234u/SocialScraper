@@ -1,9 +1,0 @@
-requests
-bs4
-igql
-jsonlib
-urllib3
-httplib2
-oauth2
-apiclient
-google-api-python-client
