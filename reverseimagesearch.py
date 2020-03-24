@@ -10,6 +10,7 @@ def reverseimagesearch():
     try:
         img=input(W+"Enter the image path:")
         surl='https://www.google.co.in/searchbyimage/upload'
+        print (W + '[+]' + G + ' Searching...'+W)
         murl={'encoded_image': (img, open(img, 'rb')), 'image_content': ''}
         response = requests.post(surl, files=murl, allow_redirects=False)
         fetchUrl = response.headers['Location']

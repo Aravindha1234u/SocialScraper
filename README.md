@@ -21,7 +21,7 @@ This system is capable of analyzing all social media platforms like **Instagram,
 ### Prerequisites
 1.Python 3.X with pip3 Installed  
 
-If not then,pip3 installation  
+If not then, pip3 installation  
 ```
 apt install python3-pip
 ```  

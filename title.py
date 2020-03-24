@@ -1,6 +1,9 @@
 import os
 
 Y = '\033[33m' # yellow
+R = '\033[31m' # red
+G = '\033[32m' # green
+C = '\033[36m' # cyan
 W = '\033[0m'  # white
 
 def title():
@@ -13,7 +16,7 @@ def title():
     print("|____/ \___/ \___|_|\__,_|_| |____/ \___|_|  \__,_| .__/| .__/ \___|_|   ")
     print("                                                  |_|   |_|")
 
-    print("Creators:\n")
+    print(Y+"Creators:\n")
     print("\t"+Y+"T3cH_W1z4rD"+W+"<techwizard128@gmail.com>")
     print("\t"+Y+"Game0v3r"+W+"<tamiltuts1290@gmail.com>")
     print("\t"+Y+"N0oB_T3cH1e$"+W+"<gowthamggg@gmail.com>")

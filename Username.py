@@ -11,8 +11,18 @@ C = '\033[36m' # cyan
 W = '\033[0m'  # white
 
 def username():
-    f=open("user.txt","r")
-    user=[j for i in f for j in i.split()]
+    user=[]
+    print(C+"1."+W+"Single Username")
+    print(C+"2."+W+"Multiple Username As File")
+    ch=int(input(C+"Enter the choice:"+W))
+    if ch==1:
+        user.append(input("\nEnter the username:"))
+    else:
+        filename=input("Filename with Directory:")
+        f=open(filename,"r")
+        s=f.read()
+        user=s.split()
+        f.close()
     ch='y'
     while ch=="y" or ch=='Y':
         print(C+"1."+W+" Facebook "+C+"\n2."+W+" Twitter "+C+"\n3."+W+" Instagram")
@@ -29,5 +39,5 @@ def username():
                 Instagram(i)
             return()
         ch=input(C+"\n\nDo you want to Continue again:"+W)
-    f.close()
+
     exit()

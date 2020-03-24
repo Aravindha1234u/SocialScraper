@@ -88,9 +88,10 @@ def Instagram(user):
                 predator.append(j1['owner']['username'])
             else:
                 pass'''
-            print(R+"\nPredator Identity Details:\n")
+            f1.close()
             print(W)
             if len(predator)>0:
+                print(R+"\nPredator Identity Details:\n")
                 for i in predator:
                     Instagram(i)
                     arr=os.listdir("./{}".format(str(i)))
@@ -98,19 +99,25 @@ def Instagram(user):
                         if re.match(r".+\.jpg",j):
                             if imageai("./{}".format(str(i))+"/"+j) == True:
                                 print(R+"{} Is a Predator".format(str(i))+W)
+                print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
+                for i in predator:
+                    print("./{0}/{1}.txt".format(i,i))
+                    f=open("./{0}/{1}.txt".format(i,i),'r')
+                    message=f.read()
+                    f.close()
+
+                    #AutoMail Generated
+                    mail(message)
             else:
-                return
-            print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
-            for i in predator:
-                print("./{0}/{1}.txt".format(i,i))
-                f=open("./{0}/{1}.txt".format(i,i),'r')
+                print(R+"\nUser Profile Details:\n"+W)
+                print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
+                f=open("./{0}/{1}.txt".format(username1,username1),'r')
+                f.seek(0)
                 message=f.read()
                 f.close()
 
                 #AutoMail Generated
                 mail(message)
-
-            f1.close()
 
     elif r.status_code == 404:
         print(R+"Error: Profile Not Found")

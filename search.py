@@ -23,6 +23,7 @@ def search():
             f1.write("\n")
             res = r.json()
             print("\n")
+            print (W + '[+]' + G + ' Fetching Osint Reconnaissance...'+W)
             #print(res)
             print(C+"Found Account At \n")
             for i in res['items']:
