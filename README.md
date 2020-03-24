@@ -1,4 +1,4 @@
-# SocialScraper
+# SocialScraper ![logo](https://cdn3.iconfinder.com/data/icons/web-hosting-2-1/128/95-512.png)
 
 Social Scraper is a python tool meant for Detection of Child Predators/Cyber Harassers on Social Media
 
@@ -10,6 +10,14 @@ Artificial Intelligence, Machine Learning with IGPL and NSFW(Not Safe For Work) 
 offensive contents.
 
 ***
+**Creators:**
+
+    [Aravindha Hariharan M](https://github.com/Aravindha1234u)
+    [Kabilan S](https://github.com/kabilan1290)
+    [Gowtham G](https://github.com/Gowtham-18)
+    [Giridhara Prasath G](https://github.com/giridhar30)
+
+
 
 ### Prerequisites
 1.Python 3.X with pip3 Installed  
@@ -52,3 +60,6 @@ To Run SocialScraper
 ```
 python3 main.py
 ```
+
+### license
+SocialScraper is licensed under GNU General Public License v3.0. Take a look at the [License](https://github.com/Aravindha1234u/SocialScraper/blob/master/LICENSE)

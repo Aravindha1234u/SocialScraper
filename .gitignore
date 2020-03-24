@@ -4,3 +4,4 @@ social/client_secret.json
 social/credentials.json
 __pycache__/**
 social/__pycache__/**
+icon.png
