@@ -153,7 +153,8 @@ class Gmail():
 def mail(message):
     A = Gmail()
     A.get_credentials()
-    to_address = '18euit009@skcet.ac.in'
+    print("\nScrapped Report are Mailed.")
+    to_address = input("\nEnter the Mail ID:")
     subject = 'Susept Profile Report'
     body = message
     A.send_mail(to_address, subject, body)

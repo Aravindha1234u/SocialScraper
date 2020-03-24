@@ -2,3 +2,4 @@
 social/api.py
 social/client_secret.json
 social/credentials.json
+__pycache__/**
