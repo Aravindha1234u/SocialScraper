@@ -1,0 +1,6 @@
+./social/api.py
+social/api.py
+social/client_secret.json
+social/credentials.json
+__pycache__/**
+social/__pycache__/**
