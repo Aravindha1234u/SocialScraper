@@ -11,16 +11,16 @@ offensive contents.
 
 ***
 ### Prerequisites
-1.Python 3.x  
-... 1. Pip3 installed  
-      if not then, pip3 installation  
-    ```
-      apt install python3-pip
-    ```
-      To check version of pip
-    ```
-      pip3 --version
-    ```
+1.Python 3.X
+...1.pip3 Installed
+If not then,pip3 installation  
+```
+apt install python3-pip
+```  
+To Check pip versioon  
+```
+pip3 --version
+```
 
 ### User List Creation
 Tool can handle N-number of user account scrapping which can be given a user.txt
