@@ -37,13 +37,22 @@ You can use any kind of text editor to edit user.txt
 ```
 gedit user.txt | vim user.txt
 ```
-
 ### Installation
 Open Terminal and type
 ```
 git clone https://github.com/Aravindha1234u/SocialScraper
 ```
 cd SocialScraper
+
+**Automatic Setup**
+
+```
+chmod +x setup
+./setup
+```
+
+**Manual Setup**
+
 To Install required Python package
 
 ```
