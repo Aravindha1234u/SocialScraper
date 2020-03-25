@@ -41,9 +41,9 @@ gedit user.txt | vim user.txt
 Open Terminal and type
 ```
 git clone https://github.com/Aravindha1234u/SocialScraper
-```
-cd SocialScraper
 
+cd SocialScraper
+```
 **Automatic Setup**
 
 ```
