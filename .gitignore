@@ -6,3 +6,6 @@ __pycache__/**
 social/__pycache__/**
 icon.png
 geckodriver.log
+*.log
+*.pyc
+social/*.pyc
