@@ -19,10 +19,14 @@ def username():
         user.append(input("\nEnter the username:"))
     else:
         filename=input("Filename with Directory:")
-        f=open(filename,"r")
-        s=f.read()
-        user=s.split()
-        f.close()
+        try:
+            f=open(filename,"r")
+            s=f.read()
+            user=s.split()
+            f.close()
+        except:
+            print(R+"File not Found")
+            username()
     ch='y'
     while ch=="y" or ch=='Y':
         print(C+"1."+W+" Facebook "+C+"\n2."+W+" Twitter "+C+"\n3."+W+" Instagram")
