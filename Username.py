@@ -29,18 +29,18 @@ def username():
             username()
     ch='y'
     while ch=="y" or ch=='Y':
-        print(C+"1."+W+" Facebook "+C+"\n2."+W+" Twitter "+C+"\n3."+W+" Instagram")
+        print(C+"1."+W+" Instagram "+C+"\n2."+W+" Twitter "+C+"\n3."+W+" Facebook ")
         choice = input(C+"root@social_scraper:"+"~/Enter the Options: "+W)
         if choice == '1':
             for i in user:
-                Facebook(i)
+                Instagram(i)
         elif choice == '2':
             for i in user:
                 ScrapTweets(i)
             return()
         elif choice == '3':
             for i in user:
-                Instagram(i)
+                Facebook(i)
             return()
         ch=input(C+"\n\nDo you want to Continue again:"+W)
 

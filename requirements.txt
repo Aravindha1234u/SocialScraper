@@ -8,5 +8,4 @@ oauth2
 apiclient
 google-api-python-client
 bs2json
-yupu
-username
+pprint

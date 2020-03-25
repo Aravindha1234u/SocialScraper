@@ -6,6 +6,7 @@ import re
 import os
 import json
 from bs2json import bs2json
+import pprint
 
 R = '\033[31m' # red
 G = '\033[32m' # green
@@ -112,25 +113,48 @@ def ScrapTweets(user):
             f1.write("\n")
         except:
             pass
-        for i in range(len(tweets['p']['a'])):
+        '''
+        for i in range(len(tweets['p']['a'])-1,len(tweets['p']['a'])):
             try:
-                f1.write(str(tweets['p']['a'][i]['s']['text'])+str(tweets['p']['a'][i]['b']['text']))
-                f1.write("\n")
-            except:
-                f1.write(tweets['p']['a'][i]['text'])
-                f1.write("\n")
+                #print("http://"+str(tweets['p']['a'][i]['text']))
                 response = requests.get("http://"+tweets['p']['a'][i]['text'])
                 soup = BeautifulSoup(response.text, 'html.parser')
                 img_tags = soup.find_all('img')
-
-                img=str(img_tags[-1])
-                regex="((?:https?://)?(?:(?:www\.)?(?:[\da-z\.-]+)\.(?:[a-z]{2,6})|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|(?:(?:[0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,7}:|(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,5}(?::[0-9a-fA-F]{1,4}){1,2}|(?:[0-9a-fA-F]{1,4}:){1,4}(?::[0-9a-fA-F]{1,4}){1,3}|(?:[0-9a-fA-F]{1,4}:){1,3}(?::[0-9a-fA-F]{1,4}){1,4}|(?:[0-9a-fA-F]{1,4}:){1,2}(?::[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:(?:(?::[0-9a-fA-F]{1,4}){1,6})|:(?:(?::[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(?::[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(?:ffff(?::0{1,4}){0,1}:){0,1}(?:(?:25[0-5]|(?:2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(?:25[0-5]|(?:2[0-4]|1{0,1}[0-9]){0,1}[0-9])|(?:[0-9a-fA-F]{1,4}:){1,4}:(?:(?:25[0-5]|(?:2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(?:25[0-5]|(?:2[0-4]|1{0,1}[0-9]){0,1}[0-9])))(?::[0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])?(?:/[\w\.-]*)*/?)"
-                matches=re.findall(regex,img)[0]
-                urllib.request.urlretrieve(matches,str(user)+"/"+str(tweets['p']['a'][i]['attributes']['href'])[-10:]+".jpg")
+                s=str(img_tags).split()
+                print(s)
+                quit()
+            except:
+                pass
+        continue
+        '''
+        for i in range(0,len(tweets['p']['a'])):
+            try:
+                f1.write(str(tweets['p']['a'][i]['s']['text'])+str(tweets['p']['a'][i]['b']['text']))
+                f1.write("\n")
+            except KeyError as e:
+                try:
+                    if str(tweets['p']['a'][i]['text']).split()!=[]:
+                        f1.write(tweets['p']['a'][i]['text'])
+                        f1.write("\n")
+                        response = requests.get("http://"+tweets['p']['a'][i]['text'])
+                        soup = BeautifulSoup(response.text, 'html.parser')
+                        img_tags = soup.find_all('img')
+                        s=str(img_tags).split()
+                        media=[]
+                        for i in s:
+                        	if "/media/" in i:
+                        		media.append(i)
+                        regex=r'https?:\/\/.*\.(?:png|jpg)'
+                        for i in media:
+                            matches=re.findall(regex,i)[0]
+                            urllib.request.urlretrieve(matches,str(user)+"/"+str(matches[-19:]))
+                    else:
+                        pass
+                except KeyError as e:
+                    pass
             else:
                 pass
         f1.write("\n")
-
     f1.close()
     print("Fetched Details are Solved at "+"./{0}/{1}.txt".format(user,user))
     if input("Do you want to open it (Y/N):") in ("Y","y"):
