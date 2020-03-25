@@ -48,6 +48,7 @@ cd SocialScraper
 
 ```
 chmod +x setup
+
 ./setup
 ```
 
