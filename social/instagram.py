@@ -16,14 +16,13 @@ W = '\033[0m'  # white
 
 def Instagram(user):
     print (W + '[+]' + G + ' Fetching Data of {} From Instagram...'.format(user)+W)
-    try:
-        os.mkdir(user)
-    except:
-        pass
-    f1=open("./{0}/{1}.txt".format(user,user),"w+")
-
     r = requests.get("https://www.instagram.com/"+ user +"/?__a=1")
     if r.status_code == 200:
+        try:
+            os.mkdir(user)
+        except:
+            pass
+        f1=open("./{0}/{1}.txt".format(user,user),"w+")
         res = r.json()['graphql']['user']
         f1.write("\n\nUsername: "+res['username'])
         f1.write("\nFull Name: "+res['full_name'])

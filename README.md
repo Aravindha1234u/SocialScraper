@@ -1,4 +1,4 @@
-# SocialScraper <img src="https://cdn3.iconfinder.com/data/icons/web-hosting-2-1/128/95-512.png" alt="logo" width="40" height="40"/>
+# SocialScraper  :octocat:
 
 Social Scraper is a python tool meant for Detection of Child Predators/Cyber Harassers on Social Media
 
@@ -10,7 +10,7 @@ This system is capable of analyzing all social media platforms like **Instagram,
 ![Tool UI](https://drive.google.com/uc?export=view&id=1e5smGCgv0GavbmotU3_ntOpo1FNGUez0)
 ***
 
-**Creators:**
+**Creators:**  :bust_in_silhouette:
 > [Aravindha Hariharan M](https://github.com/Aravindha1234u)  
 > [Kabilan S](https://github.com/kabilan1290)  
 > [Gowtham G](https://github.com/Gowtham-18)  
@@ -18,7 +18,7 @@ This system is capable of analyzing all social media platforms like **Instagram,
 
 
 
-### Prerequisites
+### Prerequisites  :package:
 1.Python 3.X with pip3 Installed  
 
 If not then, pip3 installation  
@@ -37,7 +37,7 @@ You can use any kind of text editor to edit user.txt
 ```
 gedit user.txt | vim user.txt
 ```
-### Installation
+### Installation  :floppy_disk:
 Open Terminal and type
 ```
 git clone https://github.com/Aravindha1234u/SocialScraper
@@ -64,11 +64,14 @@ or
 python3 -m pip install -r requirements.txt
 ```
 
-### Execution
+### Execution  :+1:
 To Run SocialScraper
 ```
 python3 main.py
 ```
+### Important Message  :warning:
 
-### License
+>This tool is for research purposes only. Hence, the developers of this tool won't be responsible for any misuse of data collected using this tool. Used by many researchers and open source intelligence (OSINT) analysts.
+
+### License  :page_facing_up:
 SocialScraper is licensed under GNU General Public License v3.0. Take a look at the [License](https://github.com/Aravindha1234u/SocialScraper/blob/master/LICENSE)
