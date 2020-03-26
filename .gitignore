@@ -9,3 +9,5 @@ geckodriver.log
 *.log
 *.pyc
 social/*.pyc
+*.yaml
+*.json
