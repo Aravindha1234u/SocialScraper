@@ -20,7 +20,6 @@ This system is capable of analyzing all social media platforms like **Instagram,
 
 ### Prerequisites  :package:
 1.Python 3.X with pip3 Installed  
-
 If not then, pip3 installation  
 ```
 apt install python3-pip
@@ -28,6 +27,13 @@ apt install python3-pip
 To Check pip versioon  
 ```
 pip3 --version
+```
+
+2.Geckodriver for Mozilla Firefox
+If you havn't installed then,
+Visit the link below, Download the required file for resepective operating system and install.
+```
+https://github.com/mozilla/geckodriver/releases
 ```
 
 ### User List Creation

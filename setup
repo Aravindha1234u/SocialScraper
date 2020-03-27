@@ -24,4 +24,15 @@ echo "Installing Required Python Package"
 pip3 install -r ./requirements.txt
 
 echo -e "\n"
+echo "link below for geckodriver Download and install"
+echo "https://github.com/mozilla/geckodriver/releases"
+echo -e "\n"
+read -p 'If you are using linux-x64then proceed with Y if not then N: ' answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+	wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+	tar -xvzf geckodriver*
+	chmod +x geckodriver
+	export PATH=$PATH:/path-to-extracted-file/.
+fi
+echo -e "\n"
 echo "Installation Completed"

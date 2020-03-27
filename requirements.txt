@@ -5,6 +5,7 @@ jsonlib
 urllib3
 httplib2
 oauth2
+selenium
 apiclient
 google-api-python-client
 bs2json
