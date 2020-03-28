@@ -1,7 +1,12 @@
 __pycache__/**
 geckodriver.log
 *.log
+social/api.py
+social/client_secret.json
+social/credentials.json
+social/credentials.yaml
 social/__pycache__/**
 icon.png
 *.pyc
 social/*.pyc
+.gitsecret/keys/random_seed
