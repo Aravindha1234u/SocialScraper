@@ -23,8 +23,10 @@ def main():
             ch1=input(C+"root@social_scraper:~/Username/search#"+C+"Enter the choice:"+W)
             if ch1==1:
                 search()
-            else:
+            elif ch1==2:
                 reverseimagesearch()
+            else:
+                continue
         else:
             print("Invalid Choice")
 

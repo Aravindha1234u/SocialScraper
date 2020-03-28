@@ -29,7 +29,7 @@ To Check pip versioon
 pip3 --version
 ```
 
-2.Geckodriver for Mozilla Firefox
+2.Geckodriver for Mozilla Firefox  
 If you havn't installed then,
 Visit the link below, Download the required file for resepective operating system and install.
 ```

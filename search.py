@@ -8,9 +8,26 @@ C = '\033[36m' # cyan
 W = '\033[0m'  # white
 
 def search():
-    f=open("user.txt","r")
-    username=[j for i in f for j in i.split()]
-    f.close()
+    print(C+"1."+W+"Single Username")
+    print(C+"2."+W+"Multiple Username As File")
+    ch=int(input(C+"Enter the choice:"+W))
+    username=[]
+    if ch==1:
+        username.append(input("Enter the Username: "))
+    elif ch==2:
+        filename=input("Filename with Directory:")
+        try:
+            f=open(filename,"r")
+            s=f.read()
+            user=s.split()
+            f.close()
+        except:
+            print(R+"File not Found")
+            search()
+    else:
+        print("Invalid Choice")
+        return
+
     for user in username:
         acc=[]
         r=requests.get("https://www.googleapis.com/customsearch/v1?key="+google()+"&q="+user)
