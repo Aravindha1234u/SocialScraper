@@ -1,6 +1,13 @@
+./social/api.py
+social/api.py
+social/client_secret.json
+social/credentials.json
 __pycache__/**
 geckodriver.log
 *.logs
 social/__pycache__/**
+icon.png
 *.pyc
 social/*.pyc
+*.yaml
+*.json
