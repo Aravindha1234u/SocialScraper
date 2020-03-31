@@ -46,7 +46,7 @@ https://github.com/mozilla/geckodriver/releases
 
 ### User List Creation
 Tool can handle N-number of user account scrapping which can be given a user.txt
-
+ 
 You can use any kind of text editor to edit user.txt
 ```
 gedit user.txt | vim user.txt
@@ -86,7 +86,7 @@ To Run SocialScraper
 python3 main.py
 ```
 ### Issues
-Feel free to express any kind of bug or error in this tool , So that it can be fixed soon.<br>
+Feel free to express any kind of bug or error in this tool by reporting it in issues, So that it can be fixed soon.<br>
 <a href="https://github.com/Aravindha1234u/SocialScraper/issues"><img src="https://img.shields.io/badge/issues-33-yellow" /></a>
 
 ### Important Message  :warning:
