@@ -1,7 +1,15 @@
-# SocialScraper  :octocat:
-
+<H1 align="center">SocialScraper</h1><br>
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passed-brightgreen" alt="build status">
+  <img src="https://img.shields.io/badge/analyze-passed-rightgreen" alt="Analyze">
+  <img src="https://img.shields.io/badge/tests-477%20passed%2C%202%20failed-red" alt="version">
+  <img src="https://img.shields.io/badge/coverage-75%25-green" alt="Coverage"></br>
+  <img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen" alt="Test">
+  <img src="https://img.shields.io/badge/python-v3.7-blue" alt="Python V3.7">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/badge/Status-up-brightgreen" alt="status-up"><br><br>
 Social Scraper is a python tool meant for Detection of Child Predators/Cyber Harassers on Social Media
-
+</p><br>
 
 Tool intends to identify the cyber predators/child harassers on social media with a malevolent intend. The posts, comments and followers on the social media are subjected to analysis using **Artificial Intelligence**, **Machine Learning** with IGPL and **NSFW(Not Safe For Work)** to categorise the offensive contents.
 
@@ -14,7 +22,7 @@ This system is capable of analyzing all social media platforms like **Instagram,
 > [Aravindha Hariharan M](https://github.com/Aravindha1234u)  
 > [Kabilan S](https://github.com/kabilan1290)  
 > [Gowtham G](https://github.com/Gowtham-18)  
-> [Giridhara Prasath G](https://github.com/giridhar30)  
+> [Giridhara Prasath G](https://github.com/giridhar30)   
 
 
 
@@ -69,15 +77,25 @@ or
 ```
 python3 -m pip install -r requirements.txt
 ```
+### Api Keys
+We haven't included our keys for usage. Add your respective api keys to SocialScraper/social/api.py and replace the google credentials.json and client_secret.json to sample directory and facebook credentials in credentials.yaml for scrappering the accounts.
 
 ### Execution  :+1:
 To Run SocialScraper
 ```
 python3 main.py
 ```
+### Issues
+Feel free to express any kind of bug or error in this tool and create a issues, So that it can be fixed soon.<br>
+<a href="https://github.com/Aravindha1234u/SocialScraper/issues"><img src="https://img.shields.io/badge/issues-33-yellow" /></a>
+
 ### Important Message  :warning:
 
 >This tool is for research purposes only. Hence, the developers of this tool won't be responsible for any misuse of data collected using this tool. Used by many researchers and open source intelligence (OSINT) analysts.
 
 ### License  :page_facing_up:
 SocialScraper is licensed under GNU General Public License v3.0. Take a look at the [License](https://github.com/Aravindha1234u/SocialScraper/blob/master/LICENSE)
+
+***
+# Tool Working :flower_playing_cards:
+![Tool Working](https://drive.google.com/uc?export=view&id=1y2SVImVtBh_kviigOfFg2Sj2NP98i7Wr)
