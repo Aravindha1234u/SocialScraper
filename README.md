@@ -1,4 +1,4 @@
-<H1 align="center">SocialScraper</h1><br>
+<h1 align="center">SocialScraper</h1><br>
 <p align="center">
   <img src="https://img.shields.io/badge/build-passed-brightgreen" alt="build status">
   <img src="https://img.shields.io/badge/analyze-passed-rightgreen" alt="Analyze">
@@ -86,7 +86,7 @@ To Run SocialScraper
 python3 main.py
 ```
 ### Issues
-Feel free to express any kind of bug or error in this tool and create a issues, So that it can be fixed soon.<br>
+Feel free to express any kind of bug or error in this tool , So that it can be fixed soon.<br>
 <a href="https://github.com/Aravindha1234u/SocialScraper/issues"><img src="https://img.shields.io/badge/issues-33-yellow" /></a>
 
 ### Important Message  :warning:
