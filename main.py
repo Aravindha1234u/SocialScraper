@@ -21,12 +21,10 @@ def main():
             print(C+"1."+W+"Keyword Search")
             print(C+"2."+W+"Image Search")
             ch1=input(C+"root@social_scraper:~/Username/search#"+C+"Enter the choice:"+W)
-            if ch1==1:
+            if ch1=='1':
                 search()
-            elif ch1==2:
+            elif ch1=='2':
                 reverseimagesearch()
-            else:
-                continue
         else:
             print("Invalid Choice")
 

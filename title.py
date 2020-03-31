@@ -19,7 +19,7 @@ def title():
     print(Y+"Creators:\n")
     print("\t"+Y+"T3cH_W1z4rD"+W+"<techwizard128@gmail.com>")
     print("\t"+Y+"Game0v3r"+W+"<tamiltuts1290@gmail.com>")
-    print("\t"+Y+"N0oB_T3cH1e$"+W+"<gowthamggg@gmail.com>")
+    print("\t"+Y+"N0oB_T3cH1e"+W+"<noobtechie126@gmail.com>")
     print("\t"+Y+"T3chY.BabA"+W+"<techybabaforit@gmail.com>")
     print("_"*83)
     print("\n")

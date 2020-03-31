@@ -14,6 +14,7 @@ def machine(user):
         headers={'api-key': 'quickstart-QUdJIGlzIGNvbWluZy4uLi4K'}
         )
     data = r.json()
+    
     if 'Negative' in data['output']:
         print(R+"{} May be a Predator".format(user)+W)
         return True

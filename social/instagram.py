@@ -107,7 +107,7 @@ def Instagram(user):
 
                     #AutoMail Generated
                     mail(message)
-            else:
+            '''else:
                 print(R+"\nUser Profile Details:\n"+W)
                 print("Fetched Details are Saved at "+"./{0}/{1}.txt".format(username1,username1))
                 f=open("./{0}/{1}.txt".format(username1,username1),'r')
@@ -116,7 +116,7 @@ def Instagram(user):
                 f.close()
 
                 #AutoMail Generated
-                mail(message)
+                mail(message)'''
 
     elif r.status_code == 404:
         print(R+"Error: Profile Not Found")

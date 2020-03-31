@@ -14,6 +14,7 @@ def search():
     username=[]
     if ch==1:
         username.append(input("Enter the Username: "))
+        pass
     elif ch==2:
         filename=input("Filename with Directory:")
         try:
