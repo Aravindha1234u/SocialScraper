@@ -1,12 +1,15 @@
 requests
 bs4
 igql
-jsonlib
 urllib3
 httplib2
 oauth2
 selenium
 apiclient
-google-api-python-client
+google-api-python-client==1.5.5
 bs2json
 pprint
+httplib2
+oauth2client
+jsonlib-python3
+pyyaml

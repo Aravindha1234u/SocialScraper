@@ -17,7 +17,7 @@ echo -e "\n"
 
 echo "Checking for python3 and pip3"
 apt install python3
-apt install python3-pip3
+apt install python3-pip
 echo -e "\n"
 
 echo "Installing Required Python Package"
