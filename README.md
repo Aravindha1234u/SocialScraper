@@ -80,6 +80,21 @@ python3 -m pip install -r requirements.txt
 ### Api Keys
 We haven't included our keys for usage. Add your respective api keys to SocialScraper/social/api.py and replace the google credentials.json and client_secret.json to sample directory and facebook credentials in credentials.yaml for scrappering the accounts.
 
+** Google API ** <br>
+
+Get it signed in and once you get your API key, make sure that you have enabled gmail service to this.So that automatic mail can function.
+    [Gmail API](https://developers.google.com/gmail/api)
+
+** Imagga API ** <br>
+
+Sign up as a hacker and get the API key.
+    [Imagga API](https://imagga.com/auth/signup/hacker)
+    
+** DeepAI ** <br>
+
+Sign up and get the API key 
+    [DeepAI API](https://deepai.org/)
+
 ### Execution  :+1:
 To Run SocialScraper
 ```
