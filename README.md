@@ -52,6 +52,14 @@ You can use any kind of text editor to edit user.txt
 gedit user.txt | vim user.txt
 ```
 ### Installation  :floppy_disk:
+**Python Direct module Installation**
+
+```
+python3 -m pip install SocialScraper
+```
+
+**From Source Package**
+
 Open Terminal and type
 ```
 git clone https://github.com/Aravindha1234u/SocialScraper
